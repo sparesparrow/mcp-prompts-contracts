@@ -1,0 +1,38 @@
+{
+  "name": "@sparesparrow/mcp-prompts-contracts",
+  "version": "0.1.0",
+  "description": "API contracts, schemas, and type definitions for the MCP Prompts ecosystem.",
+  "main": "dist/schemas.js",
+  "types": "dist/schemas.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests for contracts\"",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "mcp",
+    "prompts",
+    "contracts",
+    "schema"
+  ],
+  "author": "sparesparrow",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8",
+    "rimraf": "^6.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparesparrow/mcp-prompts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sparesparrow/mcp-prompts/issues"
+  },
+  "homepage": "https://github.com/sparesparrow/mcp-prompts#readme"
+}
