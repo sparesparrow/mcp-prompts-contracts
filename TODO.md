@@ -1,32 +1,30 @@
-# MCP Prompts Contracts - TODO
+# MCP Prompts Contracts - Roadmap & TODO
 
-## Úkoly pro migraci a vývoj
+## Phase 1: Initial Setup
+- [x] Create `package.json` with required dependencies
+- [x] Configure TypeScript
+- [x] Add Zod for schema definitions
+- [x] Create build scripts
 
-### Fáze 1: Základní nastavení
-- [x] Vytvořit package.json s potřebnými závislostmi
-- [x] Nastavit TypeScript konfiguraci
-- [x] Přidat Zod jako závislost pro schémata
-- [x] Vytvořit build skripty
+## Phase 2: API Definition
+- [x] Convert all types to Zod schemas
+- [x] Generate OpenAPI specification from Zod schemas
+- [ ] Add validation for all API endpoints (using Zod schemas)
+- [ ] Automate TypeScript type generation from Zod schemas
+- [ ] Add tests to verify schemas match real catalog data
 
-### Fáze 2: API Definice
-- [x] Převést všechny typy na Zod schémata
-- [x] Vytvořit OpenAPI specifikaci z Zod schémat
-- [ ] Přidat validaci pro všechny API endpointy (dle Zod schémat)
-- [ ] Vytvořit TypeScript typy z Zod schémat (automatizace)
-- [ ] Přidat testy, které ověří, že schémata odpovídají reálným datům z katalogu
+## Phase 3: CI/CD Pipeline
+- [ ] Set up GitHub Actions for lint, test, and build
+- [ ] Add automatic schema validation against examples
+- [ ] Configure automatic NPM package publishing
+- [ ] Trigger `repository_dispatch` event to meta-repo on release
 
-### Fáze 3: CI/CD Pipeline
-- [ ] Nastavit GitHub Actions pro lint, test a build
-- [ ] Přidat automatickou validaci schémat proti příkladům
-- [ ] Konfigurovat automatické publikování NPM balíčku
-- [ ] Přidat repository_dispatch event na meta-repo při release
+## Phase 4: Documentation
+- [ ] Create API documentation (including OpenAPI)
+- [ ] Add usage examples
+- [ ] Write migration guides for existing implementations
 
-### Fáze 4: Dokumentace
-- [ ] Vytvořit API dokumentaci (včetně OpenAPI)
-- [ ] Přidat příklady použití
-- [ ] Vytvořit migrační průvodce pro existující implementace
-
-### Fáze 5: Testování
-- [ ] Vytvořit unit testy pro schémata
-- [ ] Přidat integrační testy s ostatními repozitáři
-- [ ] Otestovat kompatibilitu s existujícími implementacemi 
+## Phase 5: Testing
+- [ ] Write unit tests for schemas
+- [ ] Add integration tests with other repositories
+- [ ] Test compatibility with existing implementations 

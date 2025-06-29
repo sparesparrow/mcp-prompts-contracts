@@ -1,29 +1,50 @@
 # MCP Prompts - Contracts
 
-Tento balíček obsahuje sdílené API kontrakty, Zod schémata a typové definice pro celý ekosystém MCP Prompts.
+This package provides shared API contracts, JSON schemas, and type definitions for the entire MCP Prompts ecosystem.
 
-## Generování OpenAPI specifikace
+## Purpose
 
-OpenAPI specifikace je generována automaticky ze Zod schémat v `src/schemas.ts`.
+- Single source of truth for all data structures and API contracts used by MCP servers, clients, and tools.
+- Ensures type safety, validation, and interoperability across all implementations (TypeScript, Rust, Python, Android, etc.).
 
-**Vygenerování OpenAPI:**
+## Usage
+
+- Import the package in your MCP-compatible project to access the latest schemas and types.
+- All prompt data and API payloads should be validated against these schemas.
+
+## Generating OpenAPI Specification
+
+OpenAPI specification is generated automatically from Zod schemas in `src/schemas.ts`.
+
+**To generate OpenAPI:**
 
 ```bash
-npm install # nainstalujte závislosti
+npm install # install dependencies
 npm run gen:openapi
 ```
 
-Výstupní soubor: `openapi.json` v kořeni balíčku.
+The output file is `openapi.json` in the package root.
 
-## Přidání nového schématu nebo typu
-- Všechny typy a schémata přidávejte do `src/interfaces.ts` a `src/schemas.ts`.
-- Pro každou změnu spusťte `npm run gen:openapi` a commitněte i změněný `openapi.json`.
-- Pokud přidáváte nový endpoint, rozšiřte schémata a typy podle potřeby.
+## Contributing
 
-## CI/CD a workflow
-- Každý commit na hlavní větev spouští CI, který ověřuje typy, schémata a generuje OpenAPI.
-- Publikování na NPM probíhá automaticky po úspěšném CI.
+- Add new types and schemas to `src/interfaces.ts` and `src/schemas.ts`.
+- After any schema change, run `npm run gen:openapi` and commit the updated `openapi.json`.
+- If you add a new endpoint, extend the schemas and types as needed.
 
-## Další kroky
-- Typy pro další jazyky (Rust, Kotlin) budou generovány z OpenAPI pomocí `openapi-generator`.
-- Pro více informací viz strategické dokumenty v meta-repozitáři.
+## Publishing to NPM
+
+This package is published as `@sparesparrow/mcp-prompts-contracts`.
+
+```bash
+npm publish --access public
+```
+
+## CI/CD and Workflow
+
+- Every commit to the main branch triggers CI to check types, schemas, and generate OpenAPI.
+- Publishing to NPM is automated after successful CI.
+
+## Next Steps
+
+- Type generation for other languages (Rust, Kotlin, Python) will be based on OpenAPI using `openapi-generator`.
+- See the meta-repository for strategic documents and further roadmap.
