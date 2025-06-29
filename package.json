@@ -1,6 +1,6 @@
 {
   "name": "@sparesparrow/mcp-prompts-contracts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API contracts, schemas, and type definitions for the MCP Prompts ecosystem.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
