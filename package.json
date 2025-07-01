@@ -27,8 +27,17 @@
     "zod-to-json-schema": "^3.24.6"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.js",
+    "index.d.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sparesparrow/mcp-prompts-contracts.git"
