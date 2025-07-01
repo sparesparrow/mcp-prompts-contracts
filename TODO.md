@@ -27,4 +27,8 @@
 ## Phase 5: Testing
 - [ ] Write unit tests for schemas
 - [ ] Add integration tests with other repositories
-- [ ] Test compatibility with existing implementations 
+- [ ] Test compatibility with existing implementations
+- [x] Přidat utilitu convertToPrompt pro převod raw promptů na objekt
+- [x] Přidat utilitu validatePrompt pro validaci promptu podle schématu
+- [ ] Přidat testy pro konverzi a validaci
+- [x] Aktualizovat README s příkladem použití 

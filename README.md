@@ -12,6 +12,24 @@ This package provides shared API contracts, JSON schemas, and type definitions f
 - Import the package in your MCP-compatible project to access the latest schemas and types.
 - All prompt data and API payloads should be validated against these schemas.
 
+## Usage: Conversion and Validation
+
+```ts
+import { convertToPrompt, validatePrompt } from 'mcp-prompts-contracts';
+
+const raw = {
+  name: 'my-prompt',
+  template: 'Hello, {{name}}!'
+};
+const prompt = convertToPrompt(raw, { replace: { name: 'World' } });
+const result = validatePrompt(prompt);
+if (result.valid) {
+  console.log('Prompt is valid!');
+} else {
+  console.error('Prompt is invalid:', result.errors);
+}
+```
+
 ## Generating OpenAPI Specification
 
 OpenAPI specification is generated automatically from Zod schemas in `src/schemas.ts`.

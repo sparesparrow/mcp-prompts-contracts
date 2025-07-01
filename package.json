@@ -6,7 +6,8 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watchAll",
     "gen:openapi": "ts-node scripts/generate-openapi.ts",
     "gen:json-schema": "ts-node scripts/generate-json-schema.ts"
   },
@@ -19,9 +20,12 @@
   "author": "sparesparrow",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.3",
+    "jest": "^30.0.3",
     "ncp": "^2.0.0",
-    "ts-node": "^10.9.1",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "zod": "^3.23.8",
     "zod-to-json-schema": "^3.24.6"
@@ -51,5 +55,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/src/__tests__"]
   }
 }
