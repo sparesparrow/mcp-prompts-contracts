@@ -1,9 +1,9 @@
 {
   "name": "@sparesparrow/mcp-prompts-contracts",
-  "version": "0.1.1",
-  "description": "API contracts, schemas, and type definitions for the MCP Prompts ecosystem.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.0",
+  "description": "Kontrakty (schémata, typy) pro MCP Prompts ekosystém",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,7 +31,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sparesparrow/mcp-prompts.git"
+    "url": "https://github.com/sparesparrow/mcp-prompts-contracts.git"
   },
   "bugs": {
     "url": "https://github.com/sparesparrow/mcp-prompts/issues"
@@ -39,5 +39,8 @@
   "homepage": "https://github.com/sparesparrow/mcp-prompts#readme",
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^7.3.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
