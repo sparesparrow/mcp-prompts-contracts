@@ -1,5 +1,5 @@
 import { convertToPrompt } from '../convert';
-import { validatePrompt } from '@sparesparrow/mcp-prompts-contracts';
+import { validatePrompt } from '../validate';
 
 describe('convertToPrompt', () => {
   it('converts string to prompt', () => {
@@ -46,4 +46,4 @@ describe('validatePrompt', () => {
     expect(result.valid).toBe(false);
     expect(result.errors?.length).toBeGreaterThan(0);
   });
-}); 
+});
