@@ -1,9 +1,9 @@
 {
   "name": "@sparesparrow/mcp-prompts-contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kontrakty (schémata, typy) pro MCP Prompts ekosystém",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --passWithNoTests",
@@ -31,15 +31,13 @@
     "zod-to-json-schema": "^3.24.6"
   },
   "files": [
-    "dist",
-    "index.js",
-    "index.d.ts"
+    "dist"
   ],
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {

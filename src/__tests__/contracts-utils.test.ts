@@ -1,5 +1,5 @@
 import { convertToPrompt } from '../convert';
-import { validatePrompt } from '../validate';
+import { validatePrompt } from '@sparesparrow/mcp-prompts-contracts';
 
 describe('convertToPrompt', () => {
   it('converts string to prompt', () => {
